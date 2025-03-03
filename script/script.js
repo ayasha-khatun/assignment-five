@@ -8,9 +8,10 @@ document.getElementById("blog").addEventListener("click",
 
 document.getElementById("today-date").innerText = new Date().toDateString();
 
-const colors = ['red', 'blue', 'black', 'purple', 'yellow', 'cyan'];
+const colors = ['red', 'blue', 'black', 'purple', 'yellow', 'cyan', '#F4F7FF'];
 document.getElementById("color-btn").addEventListener("click", function(){
-    document.body.style.backgroundColor = colors(Math.floor(Math.random()*colors.length));
+    let randomIndex = Math.floor(Math.random() * colors.length);
+    document.body.style.backgroundColor = colors[randomIndex];
 })
 
 let buttons = document.getElementsByClassName("completed");
@@ -24,10 +25,6 @@ for(let i = 0; i < buttons.length; i++){
         event.preventDefault();
         alert("Board updated successfully")
         
-        document.getElementById("last-btn").addEventListener("click", function(){
-            alert("Congrates!!! You have completed all the current task")
-        })
-        
         if( taskCount > 0){
             taskCount--;
             taskCountElement.innerText = taskCount;
@@ -35,8 +32,9 @@ for(let i = 0; i < buttons.length; i++){
 
         navCount++;
         navCountElement.innerText = navCount;
-
         let CurrentTime = new Date().toLocaleTimeString();
+
+        let titleTask = this.closest(".card-body").querySelector("h2").innerText;
     
 
         let textContainer = document.getElementById("fixed-text");
@@ -45,7 +43,7 @@ for(let i = 0; i < buttons.length; i++){
         newDiv.classList.add("p-2", "rounded-md", "mt-2", "bg-[#F4F7FF]");
 
         let newText = document.createElement("p");
-        newText.innerText = `You have completed the task Fix Mobile  Button issue at ${CurrentTime}`;
+        newText.innerText = `You have completed the task "${titleTask}" at ${CurrentTime}`;
         newDiv.append(newText);
         textContainer.appendChild(newDiv);
 
@@ -54,6 +52,17 @@ for(let i = 0; i < buttons.length; i++){
         })
 
         this.disabled = true;
+
+
+        let allDisabled = true;
+        for(let j = 0; j < buttons.length; j++){
+            if(!buttons[j].disabled){
+                allDisabled = false;
+        }
+        }
+        if(allDisabled){
+            alert("Congrates!!! You have completed all the current task")
+        }
 
     }
     )
