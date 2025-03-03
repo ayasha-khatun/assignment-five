@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-[#F4F7FF]">
+    <nav class="max-w-screen-lg mx-auto pt-3">
+        <div class="navbar bg-base-100 shadow-md">
+            <div class="navbar-start">
+                <img class="h-8 w-8" src="./assets/logo.png" alt="">
+                <a class="btn btn-ghost text-xl">Dev<span class="font-bold -ml-1.5">Board</span></a>
+            </div>  
+            
+            <div class="navbar-end">
+                <a class="btn mr-2">
+                  <img src="./assets/checkbox.png" alt="">
+                  <h2 class="text-2xl" id="nav-count">23</h2>
+                </a>
+                <a class="btn btn-circle" id="color-btn">
+                    <img class="h-6 w-6" src="./assets/theme-btn.png" alt="">
+                </a>
+            </div>
+        </div>
+    </nav>
+    <main class="max-w-screen-lg mx-auto flex flex-row mt-4 gap-3">
+          <section class=" bg-white p-3">
+            <div class="flex mb-4 h-28 gap-3">
+              <div class="bg-[#F4F7FF] flex gap-2 items-center p-3 rounded-sm">
+                <div>
+                  <a class="btn btn-circle">
+                    <img class="p-2" src="./assets/checkbox.png" alt="">
+                  </a>
+                </div>
+                <div>
+                  <p class="text-sm">Text Assigned</p>
+                  <h1 class="text-xl font-bold" id="task-count">06</h1>
+                </div>
+              </div>
+              <div class="bg-linear-to-r/srgb from-[#3752FD] to-[#9AA7F8] flex flex-1 gap-4 items-center p-3 rounded-sm" id="blog">
+                <div class="">
+                    <img class="p-2" src="./assets/board.png" alt="">
+                </div>
+                <div>
+                  <h1 class="text-xl font-bold text-white">Discover Something New Today!</h1>
+                </div>
+              </div>
+              <div class="bg-[#F4F7FF] flex gap-2 items-center rounded-sm p-2">
+                <div>
+                  <a class="btn btn-circle">
+                    <img class="p-2" src="./assets/calender.png" alt="">
+                  </a>
+                </div>
+                <div>
+                  <h2 id="today-date"></h2>
+                </div>
+              </div>
+            </div>
+            <div class="flex-1 grid grid-cols-3 gap-3">
+              <div class="card  bg-[#F4F7FF] shadow-sm">
+                <div class="card-body">
+                  <div class="bg-white w-20 p-2 rounded-sm">
+                    <p class="card-title text-sm">ShopEase</p>
+                  </div>
+                  <h2 class="text-xl font-medium">Fix Mobile Button Issue </h2>
+                  <div class="bg-white p-2 rounded-sm">
+                    <p>Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p>
+                  </div>
+                  <div class="card-actions flex justify-between">
+                    <div>
+                        <p class="text-sm">Deadline</p>
+                        <p class="text-md">21 March 2025</p>
+                    </div>
+                    <div>
+                        <button class="btn completed bg-[#3752FD] text-white">Completed</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="card  bg-[#F4F7FF] shadow-sm">
+                <div class="card-body">
+                  <div class="bg-white w-20 p-2 rounded-sm">
+                    <p class="card-title text-sm">ShopEase</p>
+                  </div>
+                  <h2 class="text-xl">Fix Mobile Button Issue </h2>
+                  <div class="bg-white p-2 rounded-sm">
+                    <p>Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p>
+                  </div>
+                  <div class="card-actions flex justify-between">
+                    <div>
+                        <p class="text-sm">Deadline</p>
+                        <p class="text-md">21 March 2025</p>
+                    </div>
+                    <div>
+                        <button class="btn completed bg-[#3752FD] text-white" >Completed</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="card  bg-[#F4F7FF] shadow-sm">
+                <div class="card-body">
+                  <div class="bg-white w-1/3 p-2 rounded-sm">
+                    <p class="card-title text-sm">ShopEase</p>
+                  </div>
+                  <h2 class="text-xl">Fix Mobile Button Issue </h2>
+                  <div class="bg-white p-2 rounded-sm">
+                    <p>Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p>
+                  </div>
+                  <div class="card-actions flex justify-between">
+                    <div>
+                        <p class="text-sm">Deadline</p>
+                        <p class="text-md">21 March 2025</p>
+                    </div>
+                    <div>
+                        <button class="btn completed bg-[#3752FD] text-white">Completed</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="card  bg-[#F4F7FF] shadow-sm">
+                <div class="card-body">
+                  <div class="bg-white w-1/3 p-2 rounded-sm">
+                    <p class="card-title text-sm">ShopEase</p>
+                  </div>
+                  <h2 class="text-xl">Fix Mobile Button Issue </h2>
+                  <div class="bg-white p-2 rounded-sm">
+                    <p>Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p>
+                  </div>
+                  <div class="card-actions flex justify-between">
+                    <div>
+                        <p class="text-sm">Deadline</p>
+                        <p class="text-md">21 March 2025</p>
+                    </div>
+                    <div>
+                        <button class="btn completed bg-[#3752FD] text-white">Completed</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="card  bg-[#F4F7FF] shadow-sm">
+                <div class="card-body">
+                  <div class="bg-white w-1/3 p-2 rounded-sm">
+                    <p class="card-title text-sm">ShopEase</p>
+                  </div>
+                  <h2 class="text-xl">Fix Mobile Button Issue </h2>
+                  <div class="bg-white p-2 rounded-sm">
+                    <p>Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p>
+                  </div>
+                  <div class="card-actions flex justify-between">
+                    <div>
+                        <p class="text-sm">Deadline</p>
+                        <p class="text-md">21 March 2025</p>
+                    </div>
+                    <div>
+                        <button class="btn completed bg-[#3752FD] text-white">Completed</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="card  bg-[#F4F7FF] shadow-sm">
+                <div class="card-body">
+                  <div class="bg-white w-1/3 p-2 rounded-sm">
+                    <p class="card-title text-sm">ShopEase</p>
+                  </div>
+                  <h2 class="text-xl">Fix Mobile Button Issue </h2>
+                  <div class="bg-white p-2 rounded-sm">
+                    <p>Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p>
+                  </div>
+                  <div class="card-actions flex justify-between">
+                    <div>
+                        <p class="text-sm">Deadline</p>
+                        <p class="text-md">21 March 2025</p>
+                    </div>
+                    <div>
+                        <button class="btn completed bg-[#3752FD] text-white" id="last-btn">Completed</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            </div>
+          </section>
+          <section class="min-w-52 bg-white">
+            <div class="justify-items-center p-5">
+              <div class="flex gap-3 mb-2">
+                <img src="./assets/activity.png" alt="">
+                <p>Activity Log</p>
+              </div>
+              <button class="btn bg-[#3752FD] text-white" id="clear-btn">Clear History</button>
+            </div>
+            <hr>
+            <div class="text-sm m-2" id="fixed-text"></div>
+          </section>
+    </main>
+    <script src="script/script.js"></script>
+</body>
+</html>
